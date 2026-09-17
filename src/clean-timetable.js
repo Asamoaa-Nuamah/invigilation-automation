@@ -138,7 +138,7 @@ async function cleanTimetable(srcPath, sheetName, rowCount, colCount) {
 
 async function start(allPapers, destPath) {
   const newWorkbook = new Excel.Workbook();
-  const newWorksheet = newWorkbook.addWorksheet("Sheet1");
+  const newWorksheet = newWorkbook.addWorksheet("TT");
 
   for (let i = 0; i < allPapers.length; i++) {
     newWorksheet.addRow([allPapers[i].join("%")]);
@@ -147,11 +147,11 @@ async function start(allPapers, destPath) {
   saveWorkbookToXlsxFile(newWorkbook, destPath);
 }
 
-const filename = path.join(__dirname, "./timetables/test.xlsx");
+const filename = path.join(__dirname, "./timetables/END OF FIRST SEM. EXAMS TT FINAL.xlsx");
 
-const output = path.join(__dirname, "./outputs/test-cleaned.xlsx");
+const output = path.join(__dirname, "./outputs/END OF FIRST SEM. EXAMS TT FINAL-cleaned.xlsx");
 
-cleanTimetable(filename, "Sheet1", 1010, 8)
+cleanTimetable(filename, "TT", 1010, 8)
   .then((allPapers) => {
     start(allPapers, output)
       .then(() => {

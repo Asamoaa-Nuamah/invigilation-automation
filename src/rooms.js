@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 /*
   Excel file path
 */
-const timetable = path.join(__dirname, "./outputs/End of SS ExamsTT 2026-cleaned.xlsx");
+const timetable = path.join(__dirname, "./outputs/END OF FIRST SEM. EXAMS TT FINAL-cleaned.xlsx");
 
 /*
   Read Excel and extract relevant fields
@@ -104,7 +104,7 @@ function groupRoomsForAllocation(data) {
 /*
   Write output JSON
 */
-const output = "./src/outputs/ss-end-sem-rooms.json";
+const output = "./src/outputs/END OF FIRST SEM. EXAMS TT FINAL.json";
 
 console.log("\n💾 Writing output to:", output);
 
