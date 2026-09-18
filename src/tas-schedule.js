@@ -11,14 +11,14 @@ const __dirname = path.dirname(__filename);
 
 const examsSchedule = JSON.parse(
   fs.readFileSync(
-    path.join(__dirname, "./outputs/ss-end-sem-rooms.json"),
+    path.join(__dirname, "./outputs/END OF FIRST SEM. EXAMS TT FINAL.json"),
     "utf-8",
   ),
 );
 
 const TAs = JSON.parse(
   fs.readFileSync(
-    path.join(__dirname, "./outputs/ss-end-sem-tas.json"),
+    path.join(__dirname, "./outputs/tas_list.json"),
     "utf-8",
   ),
 );
@@ -415,7 +415,7 @@ const result =
 fs.writeFileSync(
   path.join(
     __dirname,
-    "./outputs/ss-end-sem-ta_schedule.json",
+    "./outputs/END OF FIRST SEM. EXAMS TT FINAL.json",
   ),
   JSON.stringify(result, null, 2),
 );
@@ -427,7 +427,7 @@ fs.writeFileSync(
 fs.writeFileSync(
   path.join(
     __dirname,
-    "./outputs/ss-end-sem-ta_summary.json",
+    "./outputs/END OF FIRST SEM. EXAMS TT FINAL.json",
   ),
   JSON.stringify(
     scheduler.getSessionSummary(),
